@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,6 +34,7 @@ header h1 {
     justify-content: space-between;
     align-items: center;
 }
+ 
 
 ul.navbar-nav.ml-auto {
     display: flex;
@@ -201,6 +202,17 @@ main .about .detail  h1{
     font-weight: 900;
     margin: 50px 0 0 0;
     color: cornflowerblue;
+}
+
+main .about .detail a button{
+    font-size: 14px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px; 
+}
+
+main .about .detail a{
+    margin: 0;
 }
 
 main .about .detail p span{
