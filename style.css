@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background: rgb(255,255,255);
+background: linear-gradient(129deg, rgba(255,255,255,1) 24%, rgba(27,149,222,1) 24%, rgba(36,155,226,1) 100%);    
+}
+
+
+header {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: cornflowerblue;
+    margin: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.navbar-nav.ml-auto {
+    display: flex;
+    flex-direction: row;
+}
+
+a.nav-link {
+    font-size: 20px;
+    margin: 0 10px;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: cornflowerblue;
+    margin: 4px 0;
+}
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px; 
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s, max-height 0.5s ease-in-out; /* Penyesuaian di sini */
+}
+
+.mobile-nav.show {
+    display: flex;
+    opacity: 1;
+    max-height: 500px; /* Atur nilai maksimum sesuai kebutuhan */
+}
+
+.mobile-nav .nav-link {
+    padding: 15px;
+    border-bottom: 1px solid cornflowerblue;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .home {
+    display: flex;
+    flex-direction: row;
+    margin: 90px 0;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+main .home h1{
+    font-size: 50px;
+    color: cornflowerblue;
+}
+
+main .home div{
+    width: 50%;
+}
+
+main .home div a button{
+    font-size: 15px;
+    width: 110px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+main p{ 
+    text-align: justify;
+    font-weight: 500;
+    color: navy;
+}
+
+main .home img {
+     display: block;
+     width: 500px;
+     height: 500px;
+  }
+ 
+main section h1{
+    font-weight: 700;
+}
+
+main section p{
+    width: 100%;
+}
+
+main .home button{ 
+    font-size: 15px;
+    font-weight: 500;
+    background-color: cornflowerblue;
+}
+
+main .home ul{
+    display: flex;
+    flex-direction: row; 
+    margin-left: -30px;
+}
+
+main .home ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+main .home ul li h5 span{
+    color: deepskyblue;
+}
+ 
+
+main .about{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+main .about .container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+main .about .container div{
+    margin: 0 40px;
+}
+
+main .about .portofolio{
+    width: 100%;
+}
+
+main .about .portofolio img{
+    width: 100%;
+    transition: 0.5s; 
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+main .about .portofolio:hover img{
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main .about .detail{
+    width: 100%;
+}
+
+main .about .detail  h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin: 50px 0 0 0;
+    color: cornflowerblue;
+}
+
+main .about .detail p span{
+    font-weight: 900;
+}
+
+main .experience{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px 80px;
+    background-color: rgb(242, 246, 249);
+}
+
+main .experience h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: cornflowerblue;
+}
+
+main .experience .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+main .experience .container .card{
+    display: flex; 
+    align-items: center;
+    margin: 20px;
+    transition: 0.2s;
+
+}
+
+main .experience .container .card:hover{
+    box-shadow: 12px 12px 2px 1px rgba(58, 58, 58, 0.2);
+
+    transition: 0.2s;
+}
+
+main .experience .container .card .ikon{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 50%;
+    background-color: rgb(241, 241, 241);
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+main .experience .container .card:hover .ikon{
+    background-color: rgb(117, 117, 117);
+    color: white;
+    transition: 0.2s;
+}
+
+main .experience .container .card span{
+    width: 100%;
+}
+
+main .experience .container .card span p{
+    width: 100%;
+    font-weight: 800;
+    font-size: 17px;
+    text-align: center;
+}
+
+main .experience .container .card p{
+    width: 80%;
+}
+
+main .works{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+main .works h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: cornflowerblue;
+}
+ 
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.gallery .card {
+    width: 100%;
+    overflow: hidden; 
+    border: none;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.gallery .card:hover {
+    box-shadow: 12px 12px 2px 1px rgba(0, 157, 255, 0.2);
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
+
+.gallery .card h5 span{
+    font-size: 13px;
+    color: red;
+}
+
+.gallery .card a{
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+}
+ 
+
+.gallery .card a img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.contact{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 246, 249);
+}
+
+.contact h1{
+    font-weight: 700;
+    color: rgb(75, 75, 75);
+    margin-top: 40px;
+}
+
+
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 50%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.contact .container .card{
+    display: flex; 
+    align-items: center;
+    margin: 20px;
+    transition: 0.2s;
+    border: none;
+    background-color: rgba(245, 222, 179, 0);
+}
+ 
+
+.contact .container .card .ikon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 50%;
+    background-color: rgb(241, 241, 241);
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+.contact .container .card:hover .ikon{
+    background-color: rgb(117, 117, 117);
+    color: white;
+    transition: 0.2s;
+}
+
+.contact .container .card span{
+    width: 100%;
+}
+
+.contact .container .card i{
+    font-size: 75px;
+}
+
+.contact .container .card span p{
+    width: 100%;
+    font-weight: 800;
+    font-size: 17px;
+    text-align: center;
+}
+
+.contact .container .card p{
+    text-align: center;
+    font-size: 24px;
+}
+
+.contact .container a{
+    text-decoration: none;
+    color: navy;
+}
+ 
+footer{
+    background: rgb(83,78,78);
+background: linear-gradient(0deg, rgba(83,78,78,1) 0%, rgba(92,92,92,1) 100%);    
+}
+
+footer p{
+    font-size: 14px;
+    font-weight:500;
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    main{
+        background:  white;
+    } 
+
+    ul.navbar-nav.ml-auto {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    header h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: cornflowerblue; 
+        margin: 0;
+    }
+
+    main .home {
+        display: flex;
+        flex-direction: row;
+        margin: 90px 0;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    
+    main .home div{
+        width: 85%;
+    }
+
+    main .home div h1{
+        padding: 10px 0;  
+        text-align: justify;
+
+    }
+    main .home div p{ 
+        text-align: justify;
+        width:100%;
+    }
+    
+    main .home div .credit{ 
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    
+    main .home div a button{
+        font-size: 17px;
+        width: 120px;
+        height: 50px;
+        margin-right: 20px;
+    }
+    
+    main .home div ul{ 
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    main .home img{
+        display: none;
+    }
+
+    main .about{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    main .about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .experience .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .about .portofolio img {
+        width: 100%; 
+    }
+
+    main .works { 
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 30px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    main .experience {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+    }
+ 
+    main .about .detail {
+        width: 90%;
+    }
+
+    .contact .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 40px;
+    }
+
+    footer p{
+        font-size: 12px;
+        font-weight:500;
+        height: 100px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        color: white; 
+        margin: 0;
+    }
+}
+
+
+
