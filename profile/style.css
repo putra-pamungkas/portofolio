@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background: rgb(255,255,255);
+}
+
+main .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+main .image{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+main img{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 50%;
+}
+
+main .detail h1{
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.skill {
+    display: flex;
+    gap: 20px;
+}
+
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#3498db calc(var(--progress) * 1%), #e0e0e0 calc(var(--progress) * 1%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.circular-progress .label,
+.circular-progress .percentage {
+    position: relative;
+    z-index: 2;
+}
+
+.circular-progress .label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.circular-progress .percentage {
+    font-size: 18px;
+}
+
+.circular-progress[data-progress="40"] {
+    --progress: 40;
+}
+
+.circular-progress[data-progress="60"] {
+    --progress: 60;
+}
+
+.circular-progress[data-progress="40"] {
+    --progress: 40;
+}
+
+.bottom{
+    margin-top: 60px;
+    text-align: justify;
+}
+
+.bottom .container{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.bottom .container div{
+    width: 100%;
+}
+
+.bottom h1{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    main .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    main .detail{
+        width: 90%;
+    }
+
+    .circular-progress {
+        width: 95px;
+        height: 95px;
+    }
+        
+    .skill {
+        gap: 20px;
+    }
+
+    main img {
+        width: 180%;
+        margin: 40px;
+    }
+        
+    .bottom{
+        margin: 60px 20px;
+        text-align: justify;
+    }
+
+}
